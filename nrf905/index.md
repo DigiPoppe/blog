@@ -32,7 +32,7 @@ Connect the nRF905 to Teensy (or Arduino with suitable level shifters) like this
 ```
 
 
-The esp8266-12E has two SPI ports, but which one is used bij RadioHead? And which pin is 
+The esp8266-12E has two SPI ports, but which one is used by RadioHead? And which pin is 
 the SS line? Well, these are the settings which worked for me:
  
  ```
@@ -48,7 +48,8 @@ the SS line? Well, these are the settings which worked for me:
 ```
 
 Because of changes to default pins connected to CE, TX_EN and CSN, i had to adapt 
-this in the example code. The RadioHead library supports this in the init function. 
+this in the example code. The RadioHead library supports this during instantiation of 
+the `nrf905` object. 
 
 ```c++
 // Singleton instance of the radio driver
